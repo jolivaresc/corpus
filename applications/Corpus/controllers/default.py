@@ -7,6 +7,13 @@
 # - user is required for authentication and authorization
 # - download is for downloading files uploaded in the db (does streaming)
 # -------------------------------------------------------------------------
+import os,sys
+
+sys.path.append(os.getcwd()+'/Backend')
+from tfIdf import tfIdf
+from Bayes import Bayes
+
+
 
 
 def index():
@@ -44,12 +51,15 @@ def other():
     y = request.vars
     return "totototoo r=%s %s" % (x,SPAN(y))
     '''
-    message = 'Welcome, %s! B=%s' % (request.vars.Query1,request.vars.Query2)
+    #ver como recibir argumentos
+    message = 'WORD %s!' % (request.vars.word)
     return locals()
 
 def btn1():
-    
-    
+    response.flash= os.getcwd()+'asd'
+    form = SQLFORM.factory(Field('word',requires=IS_NOT_EMPTY())).process()
+    if form.accepted:
+        redirect(URL('other',vars={'word':form.vars.word}))
     return locals()
 
 def btn2():
