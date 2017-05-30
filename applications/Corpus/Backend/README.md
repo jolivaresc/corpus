@@ -2,6 +2,7 @@
 
 Para poder hacer uso de los códigos que se encuentran dentro de el directorio "Backend", es necesario
 contar con las siguientes herramientas:
+
 	Python 2.7: https://www.python.org/
 	Freeling: http://nlp.lsi.upc.edu/freeling/node/1
 	Manatee: https://nlp.fi.muni.cz/trac/noske/wiki/Downloads
