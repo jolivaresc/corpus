@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 from pickle import load
 
+"""
+* Clase que se encarga de evaluar mediante tfIdf una cadena para determinar
+* los resultados de búsqueda dada esa cadena.
+"""
+
 class tfIdf:
 
 	def __init__(self):

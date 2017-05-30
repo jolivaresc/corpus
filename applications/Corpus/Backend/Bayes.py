@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 from pickle import load
 
+"""
+* Clase que se encarga de implementar a evaluación mendiante el teorema de Bayes
+* para determinar si una cadena es positiva o negativa y adicionalmente indicar la
+* probabilidad de que sea sarcasmo
+"""
+
 class Bayes:
 
 	def __init__(self):

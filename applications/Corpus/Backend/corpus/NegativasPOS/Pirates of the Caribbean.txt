@@ -379,6 +379,46 @@ completamente completamente RG 1
 acabado acabar VMP00SM 0.865854
 ( ( Fpa 1
 y y CC 0.999989
-atrapado atrapar VMP0=G)Ä¾Å‚³h.'€u#¬eèÏÛ&owÓ&Å;­¸)fÊò\ÏzƒöŸ÷B*@>“¬¢p_” ˜+kRN‚d$÷UÄsm ÅŒŒÊÀ9½å>dªŒÈ¡Šo.®Y_O ûÕ!yAá|ßšóÙ\=`œk5-™Ö`ík›½ˆêÕ—LÒ7=cŒ¾}98}ó&_İ\ÅÁë4“‚\oËB¯\öŠ¬™Ë[9ºo7·[åšz¹­?£Ù×cêhz;aØ©Sß0.üúò>âÒœ–Å‚yP{ßæêÆ®µ§“İq‹®ìHÈ¸Iä.]ï	µ™7  BÛ²‹\}´Õ´£ˆ‘úçnÎ¼!Slµ7 µSW.g/V«pƒX^]‚Ø&:©>Œ¸îÁ¾[ˆz7ÓtÏúaë(Qß0¸+ï¿Ä\°ì„äÁd¼î€öbí¤éøêÁ=&¢?r(Õ‰ Œ9”BuuÔ0Ğ˜ùm7‡›iå­ƒKóİ:}Õs‹Æ¹ú[Ëã•Ì=‚Î* –`ïá<Gõ›u²;KÁèoS¬IÆ€C^riêıËğiR¹wÈç–³ç†=Â÷2…H¼âúÄÈDNğ`	} †=ü.ZçvQ—õ’q”¥×çZÙ-N?ü(E³
-^ª‰~°¼Ú¢¢T5á¿m_ÀgÚÔu\¹læ©P¸`UR€Öï$óUÅö¤´}Ãj>¬¿“í}é¨1ş‘Ğ¶-ñ
-Ç«Ún«ß£UÔ~°‘j)wšıèÁ_KqÙ­:q|¼×‹CÍ¿BP ‹`Ø›¨¶+úgã±¹„[´Xµ³xDkœï«¢WLuf#¹]X).í™b—;~İÀ|ƒİŠ¬‚W¦d\öùşu¡cZĞÙ—";°)_3ö	Óv_Ÿøe8Åœ+¢ÉUœ6´y|”£./Qx‘Õ=ê°äœû´)^n!H8F?ñÄ`+¶§´"T”>„É'ÉùŠzç¿tFÇ5µHH½’Ögæßì†X
+atrapado atrapar VMP00SM 1
+en en SP 1
+un uno DI0MS0 0.99698
+personaje personaje NCMS000 1
+que que PR0CN00 0.550139
+no no RN 0.999297
+lo lo PP3MSA0 0.334764
+ha haber VAIP3S0 0.999889
+dejado dejar VMP00SM 1
+salir salir VMN0000 1
+durante durante SP 1
+ya ya RG 0.999785
+8 8 Z 1
+aÃ±os aÃ±o NCMP000 1
+) ) Fpt 1
+y y CC 0.999989
+una uno DI0FS0 0.951973
+segurita seguro AQVFS00 0.516134
+quinta quinta NCFS000 0.187879
+Â¿ Â¿ Fia 1
+Y y CC 0.999989
+porque porque CS 1
+no no RN 0.999297
+? ? Fit 1
+
+Sexta sexta NP00000 0.0119048
+, , Fc 1
+sÃ©ptima 7 AO0FS00 0.983871
+, , Fc 1
+octava 8 AO0FS00 0.675862
+parte parte NCCS000 0.977711
+â€¦ â€¦ Fz 1
+a a SP 1
+el el DA0MS0 1
+publico publicar VMIP1S0 1
+lo lo PP3MSA0 0.334764
+que que PR0CN00 0.550139
+pida pedir VMSP3S0 0.495146
+Â¡ Â¡ Faa 1
+Que que CS 0.449861
+pirata pirata NCCS000 0.97619
+! ! Fat 1
+

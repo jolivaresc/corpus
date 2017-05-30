@@ -4,11 +4,16 @@ import argparse
 
 """
 * Modo de uso: python freeling.py -i Textos_Originales -o Textos_Fl
+*
+* Código que se encarga de generar el etiquetado POS de un conjunto de textos 
+* que formaran parte del corpus, se debe de ingresar el directorio con los archivos
+* de entrada y de manera opcional el directorio donde se almacenarán los textos
+* con su notación POS
 """
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-i","--input",help="Carpeta con los archivos de entrada")
-parser.add_argument("-o","--output",help="Carpeta donde se guardarán los archivos de salida")
+parser.add_argument("-i","--input",help="Directorio con los archivos de entrada")
+parser.add_argument("-o","--output",help="Directorio donde se guardarán los archivos de salida")
 args = parser.parse_args()
 
 if args.input:

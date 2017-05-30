@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+
+"""
+* Genera los modelos que nos van a permitir hacer el análisis
+* de sentimientos, la búsqueda de términos y las posibles colocaciones entre dos palabras
+"""
+
 from collections import defaultdict
 from collections import Counter
 from numpy import log10

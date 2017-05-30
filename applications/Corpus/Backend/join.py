@@ -4,11 +4,14 @@ import argparse
 
 """
 * Modo de uso: python join.py -i Textos_Originales -o Textos_Fl -f Negativo
+*
+* Código que se encarga de generar el archivo con etiquetado vertical de un
+* directorio con archivos procesados por freeling
 """
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-i","--input",help="Carpeta con los archivos de entrada")
-parser.add_argument("-o","--output",help="Carpeta donde se guardarán los archivos de salida")
+parser.add_argument("-i","--input",help="Directorio con los archivos de entrada")
+parser.add_argument("-o","--output",help="Nombre del archivo de salida")
 parser.add_argument("-f","--felling",help="Tipo de sentimiento que se expresa en el corpus")
 args = parser.parse_args()
 
@@ -29,7 +32,7 @@ if args.input:
                 if len(j)>0:
                     row = j.split(" ")
                     for k in row[0:3]:
-                        file2.write(k+" ")
+                        file2.write(k+"\t")
                     file2.write(args.felling+"\n")
             file2.write("</doc>\n")
         file2.close()

@@ -2,6 +2,11 @@
 from numpy import log2
 from pickle import load
 
+"""
+* Clase que se encarga de ver la información mutua que hay entre dos tokens
+* sirve para determinar si es colocación o no
+"""
+
 class MI:
 
 	def __init__(self):
