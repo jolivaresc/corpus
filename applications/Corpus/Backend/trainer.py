@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from collections import defaultdict
+from collections import Counter
 from numpy import log10
 from pickle import dump
 
@@ -22,7 +23,7 @@ sarcFrec = set()
 positivo = {}
 negativo = {}
 sarcasmo = {}
-words = set()
+words = []
 doc = 0
 tf = {}
 idf = {}
@@ -39,7 +40,7 @@ for i in corpus:
 	else:
 		tmp = i.split("\t")
 		tf[str(doc)] += 1
-		words.add(tmp[0])
+		words.append(tmp[0])
 		if doc < 51:
 			if tmp[0] in negativo:
 				negativo[tmp[0]] += 1
@@ -62,15 +63,23 @@ for i in corpus:
 		else:
 			tf[tmp[0]+'_'+str(doc)] = 1
 
+ngrams = []
+for i in range(0,len(words)-1):
+	ngrams.append(words[i]+"_"+words[i+1])
+
 for i in dtf:
 	tmp = len(list(dtf[i]))
 	idf[i] = log10(N/float(tmp))
 
-l = len(list(words))
+l = len(list(set(words)))
+ngrams = Counter(ngrams)
+words = Counter(words)
 positivo = p(positivo,l)
 negativo = p(negativo,l)
 sarcasmo = p(sarcasmo,l,classFrec=len(list(sarcFrec)))
 
+toFile("./models/ngrams.d",ngrams)
+toFile("./models/words.d",words)
 toFile("./models/tf.d",tf)
 toFile("./models/idf.d",idf)
 toFile("./models/index.d",docs)
