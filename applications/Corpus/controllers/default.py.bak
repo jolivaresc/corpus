@@ -11,7 +11,7 @@ import os,sys
 
 sys.path.append(os.getcwd()+'/Backend')
 from Bayes import Bayes
-
+from concordance import get
 from MI import MI
 from tfIdf import tfIdf
 
@@ -52,7 +52,7 @@ def other():
     return "totototoo r=%s %s" % (x,SPAN(y))
     '''
     #ver como recibir argumentos
-    message = 'WORD %s!' % (request.vars.word)
+    message = 'WORD %s!' % (request.vars.word))
     return locals()
 
 def btn1():
