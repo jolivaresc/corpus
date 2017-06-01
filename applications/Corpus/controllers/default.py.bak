@@ -61,7 +61,7 @@ def other():
     
     
     message = 'WORD %s!' % (request.vars.word)
-    return locals()
+    return dict(form=sorted(probs.items(),reverse=True))
     
 
 def btn1():

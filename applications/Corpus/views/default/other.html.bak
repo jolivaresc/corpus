@@ -1,5 +1,25 @@
 {{extend 'layout.html'}}
-<h1>Está es la plantilla default/other.html</h1>
-{{movies=response._vars}}
-{{=BEAUTIFY((movies.items()))}}
-{{=form}}
+<h1>
+    <b>
+        Análisis tfIdf
+    </b>
+</h1>
+<p><p><p>
+La frase solicitada es: <b>{{=request.vars.word}}</b>
+
+<table>
+    <tr>
+        <th>Archivo:</th>
+        <th>Probabilidad</th>
+    </tr>
+    <tr>
+        <th> </th>
+        <th> </th>
+    </tr>
+    {{for k,v in form:}}
+    <tr>
+        <th>{{=v}}:</th>
+        <td>{{=k}}</td>
+    </tr>
+    {{pass}}
+</table>

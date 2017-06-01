@@ -57,11 +57,11 @@ def other():
     for i,j in l:
         probs[i]=j
     #ver como recibir argumentos
-    response.flash = os.getcwd()
+    response.flash = 'Frase: '+request.vars.word
     
     
     message = 'WORD %s!' % (request.vars.word)
-    return dict(form=probs)
+    return dict(form=sorted(probs.items(),reverse=True))
     
 
 def btn1():
