@@ -1,11 +1,18 @@
 ## Proyecto Final de Procesamiento de Corpus Textuales y Orales
 
-Para poder hacer uso de los códigos que se encuentran dentro de el directorio "Backend", es necesario
-contar con las siguientes herramientas:
+
+Los archivos *.py para realizar el análisis del corpus se encuentran dentro de el directorio "corpus/applications/Corpus/controllers", es necesario contar con las siguientes herramientas: 
 
 	Python 2.7: https://www.python.org/
 	Freeling: http://nlp.lsi.upc.edu/freeling/node/1
 	Manatee: https://nlp.fi.muni.cz/trac/noske/wiki/Downloads
+
+Adicional a los programas para analizar el corpus, en la misma carpeta se encuentran los archivos que se utilizan para generar la página web que despliega los resultados del análisis. 
+Estos archivos son:
+
+	appadmin.py
+	default.py
+	httpserver.log
 
 ## Proceso de compilación
 Una vez que se cuenta con las herramientas antes mencionadas, es necesario compilar el corpus, para esto,
