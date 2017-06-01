@@ -1,0 +1,9 @@
+PATH /corpora/manatee/fullcorpus
+VERTICAL "/corpora/vert/fullcorpus.vrt"
+ATTRIBUTE term
+ATTRIBUTE lem
+ATTRIBUTE pos
+ATTRIBUTE fel
+STRUCTURE doc {
+	ATTRIBUTE name
+}

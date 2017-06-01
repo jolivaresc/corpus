@@ -8,13 +8,11 @@
 # - download is for downloading files uploaded in the db (does streaming)
 # -------------------------------------------------------------------------
 import os,sys
-
-sys.path.append(os.getcwd()+'/Backend')
+#sys.path.append(os.getcwd()+'/applications/Corpus/Backend')
 from Bayes import Bayes
 from concordance import get
 from MI import MI
 from tfIdf import tfIdf
-
 
 def index():
     form = FORM(INPUT(_type="submit",_value='asd'),
@@ -34,9 +32,9 @@ def index():
         #response.flash = 'Form displayed for the first time'
         pass
     '''
+    response.flash = os.getcwd()
+    
     return locals()
-    #redirect(URL('other',args=['hello',':v'],vars={'a':'test','b':123}))
-    #return "AOOAOAOAOAOAO"
 
 def other():
     '''
@@ -51,12 +49,31 @@ def other():
     y = request.vars
     return "totototoo r=%s %s" % (x,SPAN(y))
     '''
+    path = os.getcwd()
+    response.flash = path
+    model_tf = tfIdf()
+    l = model_tf.search(request.vars.word)
+    probs={}
+    for i,j in l:
+        probs[i]=j
     #ver como recibir argumentos
+    response.flash = os.getcwd()
+    
+    
     message = 'WORD %s!' % (request.vars.word)
-    return locals()
+    return dict(form=probs)
+    
 
 def btn1():
-    response.flash= os.getcwd()+'/Backend'
+    
+    response.flash= os.getcwd()+'/BackendBackendBackendB\
+    ackendBackendBackendBacke\
+    ndBackendBackendBackendBacke\
+    ndBackendBackendBackendBackend\
+    asdasdasdasdasdasdasdasdasdadkdjfl\
+    akjshflksdhflaskhfalksdhflahjflkdjs'
+    
+    
     form = SQLFORM.factory(Field('word',requires=IS_NOT_EMPTY())).process()
     if form.accepted:
         redirect(URL('other',vars={'word':form.vars.word}))
