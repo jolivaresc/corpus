@@ -52,14 +52,8 @@ def other():
     l = model.search(request.vars.Palabra)
     probs={}
     for i,j in l:
-<<<<<<< HEAD
         probs[i]=j
     message = 'WORD %s!' % (request.vars.Palabra)
-=======
-        probs[i]=j#Aquí está el detalle, como le estás agregando como llave la probabilidad, sólo está almacenando
-        #El último título con probabilidad 0
-    message = 'WORD %s!' % (request.vars.word)
->>>>>>> 1697977a2cbacff695f89555ece11d9e322ef624
     return dict(form=sorted(probs.items(),reverse=True))
 
 def concordancia():
