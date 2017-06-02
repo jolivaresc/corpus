@@ -52,22 +52,22 @@ def other():
     l = model.search(request.vars.Palabra)
     probs={}
     for i,j in l:
-<<<<<<< HEAD
-        probs[i]=j
-    message = 'WORD %s!' % (request.vars.Palabra)
-=======
-        probs[i]=j#Aquí está el detalle, como le estás agregando como llave la probabilidad, sólo está almacenando
-        #El último título con probabilidad 0
-    message = 'WORD %s!' % (request.vars.word)
->>>>>>> 1697977a2cbacff695f89555ece11d9e322ef624
+        if i != 0:
+            probs[i]=j
+    os.chdir(path)#
     return dict(form=sorted(probs.items(),reverse=True))
 
-def concordancia():
+def infmutua():
     response.flash = os.getcwd()
     path=os.getcwd()
+    sys.path.append(os.getcwd()+'/applications/Corpus/controllers')
+    os.chdir(os.getcwd()+'/applications/Corpus/controllers')
     from MI import MI
+    model = MI()
+    mi = model.eval(request.vars.Palabra1,request.vars.Palabra2)
     message = 'WORD %s %s' % (request.vars.Palabra1,request.vars.Palabra2)
-    return locals()
+    os.chdir(path)
+    return dict(mi=mi)
 
 def btn1():
     response.flash= os.getcwd()+'/Backend'
@@ -80,9 +80,11 @@ def btn2():
     form = SQLFORM.factory(Field('Palabra1',requires=IS_NOT_EMPTY()),
                            Field('Palabra2',requires=IS_NOT_EMPTY())).process()
     if form.accepted:
-        redirect(URL('concordancia',vars={'Palabra1':form.vars.Palabra1,'Palabra2':form.vars.Palabra2}))
+        redirect(URL('infmutua',vars={'Palabra1':form.vars.Palabra1,'Palabra2':form.vars.Palabra2}))
     return dict(form=form)
 
+def btn3():
+    return locals()
 
 def user():
     """
