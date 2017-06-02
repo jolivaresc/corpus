@@ -82,6 +82,19 @@ def colocaciones():
     os.chdir(path)
     return dict(res=res)
 
+def feelings():
+    response.flash = os.getcwd()
+    message=request.vars.Palabra
+    path=os.getcwd()
+    sys.path.append(os.getcwd()+'/applications/Corpus/controllers')
+    sys.path.append(os.getcwd()+'/applications/Corpus/controllers/')
+    os.chdir(os.getcwd()+'/applications/Corpus/controllers')
+    from Bayes import Bayes
+    model = Bayes()
+    tmp = model.evalStr(request.vars.Palabra)
+    os.chdir(path)
+    return dict(tmp=tmp)
+
 def btn1():
     response.flash= os.getcwd()+'/Backend'
     form = SQLFORM.factory(Field('Palabra',requires=IS_NOT_EMPTY())).process()
@@ -101,6 +114,13 @@ def btn3():
     if form.accepted:
         redirect(URL('colocaciones',vars={'Query':form.vars.Query}))
     return dict(form=form)
+
+def btn4():
+    response.flash= os.getcwd()+'/Backend'
+    form = SQLFORM.factory(Field('Palabra',requires=IS_NOT_EMPTY())).process()
+    if form.accepted:
+        redirect(URL('feelings',vars={'Palabra':form.vars.Palabra}))
+    return locals()
 
 def user():
     """
