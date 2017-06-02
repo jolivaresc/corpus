@@ -3,6 +3,6 @@
 
 La frase "<b>{{=request.vars.Palabra}}</b>" es:
 
-<h1>
-    {{if tmp[0]>tmp[1]:}POSITIVA{{else:}}NEGATIVA{{pass}} y la probabilidad de que sea sarcasmo es de <b>{{=tmp[2]}}</b>
-</h1>
+<h2>
+    {{if tmp[0]>tmp[1]:}}<b>POSITIVA</b>{{else:}}<b>NEGATIVA</b>{{pass}} y la probabilidad de que sea sarcasmo es de <b>{{=tmp[2]}}</b>
+</h2>
