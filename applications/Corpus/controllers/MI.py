@@ -25,6 +25,9 @@ class MI:
 			sup = float(self.ngrams[str1+"_"+str2])/float(self.count)
 			inf = float(self.words[str1]) * float(self.words[str2])
 			inf = inf/(float(self.count)*float(self.count))
-			return log2(sup/inf)
+			if inf == 0:
+				return 0
+			else:
+				return log2(sup/inf)
 		except:
 			return 0 
