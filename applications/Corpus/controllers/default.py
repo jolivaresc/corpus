@@ -52,9 +52,14 @@ def other():
     l = model.search(request.vars.Palabra)
     probs={}
     for i,j in l:
+<<<<<<< HEAD
         if i != 0:
             probs[i]=j
     os.chdir(path)#
+=======
+        probs[i]=j
+    message = 'WORD %s!' % (request.vars.Palabra)
+>>>>>>> 1063d5b9c88f6ce5857ae7a44ac54fa292a9cf2c
     return dict(form=sorted(probs.items(),reverse=True))
 
 def infmutua():

@@ -11,16 +11,16 @@ from Bayes import Bayes
 from concordance import get
 from MI import MI
 from tfIdf import tfIdf
-
+"""
 models_TF = tfIdf()
 l = models_TF.search("La noche de terror va a empezar")
 for i,j in l:
 	print j
 """
 models_MI = MI()
-mi = models_MI.eval("la","historia")
+mi = models_MI.eval("la","noche")
 print mi
-
+"""
 model_B = Bayes()
 tmp = model_B.evalStr("La noche de terror va a empezar")
 print tmp
