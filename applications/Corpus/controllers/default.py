@@ -52,7 +52,8 @@ def other():
     l = model.search(request.vars.word)
     probs={}
     for i,j in l:
-        probs[i]=j
+        probs[i]=j#Aquí está el detalle, como le estás agregando como llave la probabilidad, sólo está almacenando
+        #El último título con probabilidad 0
     message = 'WORD %s!' % (request.vars.word)
     return dict(form=sorted(probs.items(),reverse=True))
 
