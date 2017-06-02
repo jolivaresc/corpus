@@ -15,8 +15,8 @@ La frase solicitada es: <b>{{=request.vars.Palabra}}</b>
     </tr>
     {{for k,v in form:}}
     <tr>
-        <th>{{=v}}:</th>
-        <td>{{=k}}</td>
+        <th>{{=k}}:</th>
+        <td>{{=v}}</td>
     </tr>
     {{pass}}
 </table>

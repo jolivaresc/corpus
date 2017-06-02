@@ -31,8 +31,8 @@ response.google_analytics_id = None
 response.menu = [
     (T('Home'), False, URL('default', 'index'), []),
     (T('Análisis TF-IDF'), False, URL('default', 'btn1'),[]),
-    (T('btn2'),False, URL('default', 'btn2'), []),
-    (T('About'),False, URL('default', 'other'), []),
+    (T('Información Mutua'),False, URL('default', 'btn2'), []),
+    (T('Colocaciones'),False, URL('default', 'btn3'), []),
 ]
 
 DEVELOPMENT_MENU = False

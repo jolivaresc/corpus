@@ -5,7 +5,7 @@
 # Customize your APP title, subtitle and menus here
 # ----------------------------------------------------------------------------------------------------------------------
 
-response.logo = A(B('corpus', SPAN('UNAM'), ' using web',SPAN(2),'py'), XML('&trade;&nbsp;'),
+response.logo = A(B('corpus', SPAN('UNAM')), XML('&trade;&nbsp;'),
                   _class="navbar-brand", _href="http://www.corpus.unam.mx",
                   _id="web2py-logo")
 response.title = request.application.replace('_', ' ').title()
@@ -31,8 +31,8 @@ response.google_analytics_id = None
 response.menu = [
     (T('Home'), False, URL('default', 'index'), []),
     (T('Análisis TF-IDF'), False, URL('default', 'btn1'),[]),
-    (T('btn2'),False, URL('default', 'btn2'), []),
-    (T('About'),False, URL('default', 'other'), []),
+    (T('Información Mutua'),False, URL('default', 'btn2'), []),
+    (T('colocaciones'),False, URL('default', 'btn3'), []),
 ]
 
 DEVELOPMENT_MENU = False
