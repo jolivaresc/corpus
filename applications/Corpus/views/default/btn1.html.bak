@@ -1,4 +1,5 @@
 {{extend 'layout.html'}}
-<h1>Está es la plantilla default/btn1.html</h1>
+<h1>Búsqueda por relevancia</h1>
 
+{{=form}}
 asdasdad

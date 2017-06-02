@@ -49,23 +49,33 @@ def other():
     from tfIdf import tfIdf
     model = tfIdf()
     os.chdir(path)
-    l = model.search(request.vars.word)
+    l = model.search(request.vars.Palabra)
     probs={}
     for i,j in l:
         probs[i]=j
-    message = 'WORD %s!' % (request.vars.word)
+    message = 'WORD %s!' % (request.vars.Palabra)
     return dict(form=sorted(probs.items(),reverse=True))
 
+def concordancia():
+    response.flash = os.getcwd()
+    path=os.getcwd()
+    from MI import MI
+    message = 'WORD %s %s' % (request.vars.Palabra1,request.vars.Palabra2)
+    return locals()
 
 def btn1():
     response.flash= os.getcwd()+'/Backend'
-    form = SQLFORM.factory(Field('word',requires=IS_NOT_EMPTY())).process()
+    form = SQLFORM.factory(Field('Palabra',requires=IS_NOT_EMPTY())).process()
     if form.accepted:
-        redirect(URL('other',vars={'word':form.vars.word}))
+        redirect(URL('other',vars={'Palabra':form.vars.Palabra}))
     return locals()
 
 def btn2():
-    return locals()
+    form = SQLFORM.factory(Field('Palabra1',requires=IS_NOT_EMPTY()),
+                           Field('Palabra2',requires=IS_NOT_EMPTY())).process()
+    if form.accepted:
+        redirect(URL('concordancia',vars={'Palabra1':form.vars.Palabra1,'Palabra2':form.vars.Palabra2}))
+    return dict(form=form)
 
 
 def user():
