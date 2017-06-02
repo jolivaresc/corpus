@@ -11,25 +11,7 @@ import os,sys
 
 
 def index():
-    form = FORM(INPUT(_type="submit",_value='asd'),
-               )
-
-    '''
-    form = SQLFORM.factory(Field('Query1',requires=IS_NOT_EMPTY()),
-                           Field('Query2','date',requires=IS_NOT_EMPTY())).process()
-    if form.accepted:
-        #session.flash = 'Form accepted'
-        redirect(URL('other',vars={'Query1':form.vars.Query1,
-                                   'Query2':form.vars.Query2}))
-    elif form.errors:
-        #response.flash = 'Form containt errors'
-        pass
-    else:
-        #response.flash = 'Form displayed for the first time'
-        pass
-    '''
-    response.flash = os.getcwd()
-    
+    #response.flash = os.getcwd()
     return locals()
 
 def other():
@@ -76,7 +58,6 @@ def other():
 
 
 def btn1():
-    
     response.flash= os.getcwd()+'/Backend'
     form = SQLFORM.factory(Field('word',requires=IS_NOT_EMPTY())).process()
     if form.accepted:

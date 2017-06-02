@@ -6,7 +6,7 @@
 # ----------------------------------------------------------------------------------------------------------------------
 
 response.logo = A(B('corpus', SPAN('UNAM'), ' using web',SPAN(2),'py'), XML('&trade;&nbsp;'),
-                  _class="navbar-brand", _href="http://www.web2py.com/",
+                  _class="navbar-brand", _href="http://www.corpus.unam.mx",
                   _id="web2py-logo")
 response.title = request.application.replace('_', ' ').title()
 response.subtitle = ''
@@ -30,8 +30,9 @@ response.google_analytics_id = None
 
 response.menu = [
     (T('Home'), False, URL('default', 'index'), []),
+    (T('Análisis TF-IDF'), False, URL('default', 'btn1'),[]),
+    (T('btn2'),False, URL('default', 'btn2'), []),
     (T('About'),False, URL('default', 'other'), []),
-    (T('btn1'), False, URL('default', 'btn1'),[]),
 ]
 
 DEVELOPMENT_MENU = False
