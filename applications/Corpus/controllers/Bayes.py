@@ -35,11 +35,7 @@ class Bayes:
 		s = 1.0
 		n = 0.5
 		for i in st:
-			print i
 			tmp = self.eval(i)
-			print p
-			print n
-			print s
 			p *= float(tmp[0])
 			n *= float(tmp[1])
 			s *= float(tmp[2])
