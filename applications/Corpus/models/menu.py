@@ -32,7 +32,7 @@ response.menu = [
     (T('Home'), False, URL('default', 'index'), []),
     (T('Análisis TF-IDF'), False, URL('default', 'btn1'),[]),
     (T('Información Mutua'),False, URL('default', 'btn2'), []),
-    (T('btn3'),False, URL('default', 'btn3'), []),
+    (T('Colocaciones'),False, URL('default', 'btn3'), []),
 ]
 
 DEVELOPMENT_MENU = False

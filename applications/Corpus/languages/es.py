@@ -87,6 +87,8 @@
 'client': 'cliente',
 'Client IP': 'IP del Cliente',
 'Close': 'Cerrar',
+'Colocaciones': 'Colocaciones',
+'colocaciones': 'colocaciones',
 'Community': 'Comunidad',
 'compile': 'compilar',
 'compiled application removed': 'aplicación compilada eliminada',

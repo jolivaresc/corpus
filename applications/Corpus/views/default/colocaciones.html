@@ -1,0 +1,18 @@
+{{extend 'layout.html'}}
+<h1>
+    <b>
+        Colocaciones
+    </b>
+</h1>
+<div>
+    Query: <b>{{=request.vars.Query}}</b>
+</div>
+<br><br>
+
+{{for i in res:}}
+    <tr>
+        <ul>
+            <th>{{=i}}</th>
+        </ul>
+    </tr>
+{{pass}}

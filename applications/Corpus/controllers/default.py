@@ -18,11 +18,11 @@ def other():
     '''
     esto iría en index
     <form action="{{=URL('other')}}">
-    Your  name?
-    <input name="y_name"/>
-    <br>
-    <input type="submit"/>
-</form>
+        Your  name?
+        <input name="y_name"/>
+        <br>
+        <input type="submit"/>
+    </form>
     x = request.args
     y = request.vars
     return "totototoo r=%s %s" % (x,SPAN(y))
@@ -52,14 +52,10 @@ def other():
     l = model.search(request.vars.Palabra)
     probs={}
     for i,j in l:
-<<<<<<< HEAD
         if i != 0:
             probs[i]=j
     os.chdir(path)#
-=======
-        probs[i]=j
     message = 'WORD %s!' % (request.vars.Palabra)
->>>>>>> 1063d5b9c88f6ce5857ae7a44ac54fa292a9cf2c
     return dict(form=sorted(probs.items(),reverse=True))
 
 def infmutua():
@@ -73,6 +69,18 @@ def infmutua():
     message = 'WORD %s %s' % (request.vars.Palabra1,request.vars.Palabra2)
     os.chdir(path)
     return dict(mi=mi)
+
+def colocaciones():
+    response.flash = os.getcwd()
+    message=request.vars.Query
+    path=os.getcwd()
+    sys.path.append(os.getcwd()+'/applications/Corpus/controllers')
+    sys.path.append(os.getcwd()+'/applications/Corpus/controllers/')
+    os.chdir(os.getcwd()+'/applications/Corpus/controllers')
+    from concordance import get
+    res = get(request.vars.Query).split('\n')
+    os.chdir(path)
+    return dict(res=res)
 
 def btn1():
     response.flash= os.getcwd()+'/Backend'
@@ -89,7 +97,10 @@ def btn2():
     return dict(form=form)
 
 def btn3():
-    return locals()
+    form = SQLFORM.factory(Field('Query',requires=IS_NOT_EMPTY())).process()
+    if form.accepted:
+        redirect(URL('colocaciones',vars={'Query':form.vars.Query}))
+    return dict(form=form)
 
 def user():
     """
