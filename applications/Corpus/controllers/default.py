@@ -96,7 +96,7 @@ def feelings():
     return dict(tmp=tmp)
 
 def btn1():
-    response.flash= os.getcwd()+'/Backend'
+    #response.flash= os.getcwd()+'/Backend'
     form = SQLFORM.factory(Field('Palabra',requires=IS_NOT_EMPTY())).process()
     if form.accepted:
         redirect(URL('other',vars={'Palabra':form.vars.Palabra}))

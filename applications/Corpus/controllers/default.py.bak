@@ -93,7 +93,7 @@ def feelings():
     model = Bayes()
     tmp = model.evalStr(request.vars.Palabra)
     os.chdir(path)
-    return locals()
+    return dict(tmp=tmp)
 
 def btn1():
     response.flash= os.getcwd()+'/Backend'

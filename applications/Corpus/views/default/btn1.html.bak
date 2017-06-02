@@ -1,5 +1,15 @@
 {{extend 'layout.html'}}
-<h1>Búsqueda por relevancia</h1>
+<h1>Búsqueda por relevancia mediante la medida TF-IDF (term frequency–inverse document frequency)</h1>
+<div>
+    Es un método que calcula pesos estadísticos
+    que permiten indicar qué tan importante es una
+    palabra dentro de un texto.
+    Fórmula:
+    Log(cantidad de documento en que aparece
+    cada término/ total de documentos)
+    Mientras más frecuencia tenga un término en
+    los documentos, menos término será.
+</div>
+<br><br><br><br>
 
 {{=form}}
-asdasdad

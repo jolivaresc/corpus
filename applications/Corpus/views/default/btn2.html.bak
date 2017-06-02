@@ -1,7 +1,10 @@
 {{extend 'layout.html'}}
-<h1><b>Concordancias</b></h1>
+<h1><b>Información mutua</b></h1>
 
-
+<div>
+La información mutua es una medida de gran importancia en la teoría de la información, que consiste en la información aportada por una variable aleatoria sobre la otra. En el estudio de colocaciones, <b>la información mutua mide la fuerza de asociación entre dos palabras.</b> Es una medida estaística que determina la cantidad de información que la aparición de una palabra nos da sobre la aparición de otra. Para ello, calcula la probabilidad de que dos palabras aparezcan juntas, y la compara con la probabilidad de que dichas palabras aparezcan por separado. A mayor valor se tendrá que existe una asociación fuerte, de forma que la probabilidad de que aparezcan juntas deberá ser mucho mayor que la de que aparezcan de forma independiente. En caso de que los dos valores de frecuencia sean muy similares, la concurrencia de las dos palabras no suele considerarse muy significativa
+</div>
+<br><br><br><br>
 <div>
     {{=BEAUTIFY(response._vars)}}
 </div>
