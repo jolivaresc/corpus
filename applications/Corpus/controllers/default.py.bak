@@ -78,7 +78,7 @@ def colocaciones():
     sys.path.append(os.getcwd()+'/applications/Corpus/controllers/')
     os.chdir(os.getcwd()+'/applications/Corpus/controllers')
     from concordance import get
-    res = get(request.vars.Query).split('\n')
+    res = get(request.vars.Query)
     os.chdir(path)
     return dict(res=res)
 
@@ -96,7 +96,7 @@ def feelings():
     return dict(tmp=tmp)
 
 def btn1():
-    response.flash= os.getcwd()+'/Backend'
+    #response.flash= os.getcwd()+'/Backend'
     form = SQLFORM.factory(Field('Palabra',requires=IS_NOT_EMPTY())).process()
     if form.accepted:
         redirect(URL('other',vars={'Palabra':form.vars.Palabra}))

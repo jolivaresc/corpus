@@ -83,7 +83,10 @@
             {{end}}
         </div>
       {{pass}}
-
+      <div class="silver center padded">
+        <a class="fa fa-twitter" href="https://twitter.com/web2py/"></a>
+        <a class="fa fa-facebook" href="https://www.facebook.com/web2py/"></a>
+      </div>
       <div class="{{=middle_column}}">
         {{block center}}
         {{include}}
@@ -104,7 +107,7 @@
     {{block footer}} <!-- this is default footer -->
     <footer class="footer">
       <div class="container-fluid">
-        <div class="copyright pull-left">{{=T('Facultad de Ingeniería,')}}<b>UNAM</b> &#169; {{=request.now.year}}</div>
+        <div class="copyright pull-left">{{=T('Facultad de Ingeniería, ')}}<b>UNAM</b> &#169; {{=request.now.year}}</div>
           <div id="poweredBy" class="pull-right">
             {{=T('Powered by')}}
             <a href="http://www.web2py.com/">web2py</a>

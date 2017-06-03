@@ -5,4 +5,4 @@
 Resultado de la concordancia entre:<p>
 
 
-<b>{{=request.vars.Palabra1}}</b> y <b>{{=request.vars.Palabra2}}</b><br>=<br>{{=mi}}
+<b>{{=request.vars.Palabra1}}</b> y <b>{{=request.vars.Palabra2}}</b>&nbsp;=&nbsp;{{=mi}}
