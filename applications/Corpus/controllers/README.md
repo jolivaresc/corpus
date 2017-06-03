@@ -94,7 +94,7 @@ Finalmente, para hacer uso de manatee y ver las concordancias que puede haber de
 
 De esta forma sólo se está evaluando una cadena de texto simple, si se quisiera enviar una query, se tendría que hacer de la siguiente manera:
 
-	res = get("\'\"México\"\'",query=True)
+	res = get("q\'\"México\"\'")
 	print res
 
 Donde \'\"México\"\' es nuestra query a evaluar

@@ -7,8 +7,11 @@ import commands
 * de tokens o de un query
 """
 
-def get(st,query=False):
-	if query:
+def get(st):
+	if st.startswith("q"):
+		print "query"
+		st = st[1:]
 		return commands.getoutput("corpquery fullcorpus "+st)
 	else:
+		print "string"
 		return commands.getoutput("corpquery fullcorpus \'\""+st+"\"\'")
