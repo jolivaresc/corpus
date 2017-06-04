@@ -29,12 +29,12 @@ response.google_analytics_id = None
 # ----------------------------------------------------------------------------------------------------------------------
 
 response.menu = [
-    (T('Home'), False, URL('default', 'index'), []),
+    (T('Inicio'), False, URL('default', 'index'), []),
     (T('Análisis TF-IDF'), False, URL('default', 'btn1'),[]),
     (T('Información Mutua'),False, URL('default', 'btn2'), []),
     (T('Concordancias'),False, URL('default', 'btn3'), []),
     (T('Análisis de sentimientos'),False, URL('default', 'btn4'), []),
-    (T('About'),False, URL('default','user'), []),
+    (T('Acerca de'),False, URL('default','btn5'), []),
 ]
 
 DEVELOPMENT_MENU = False

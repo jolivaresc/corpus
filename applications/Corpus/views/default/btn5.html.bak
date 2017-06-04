@@ -1,0 +1,75 @@
+{{extend 'layout.html'}}
+<h1><b>Proyecto Final de Procesamiento de Corpus Textuales y Orales</b></h1>
+<br>
+<div>
+    El proyecto consistía en recopilar y compilar 50 documentos de reseñas de películas para crear una
+aplicación que pudiera hacer análisis de textos.
+    <div>
+        Las fuentes consultadas fueron:
+        <ul>
+            <li>
+                    <a href="http://cinescopia.com/" >http://cinescopia.com/</a>
+            </li>
+            <li>
+                <a href="http://www.sensacine.com/">http://www.sensacine.com/</a>
+            </li>
+            <li>
+                <a href="http://entrelalecturayelcine.blogspot.mx/">http://entrelalecturayelcine.blogspot.mx/</a>
+            </li>
+            <li>
+                <a href="http://www.labutaca.net/">http://www.labutaca.net/</a>
+            </li>
+        </ul>
+        
+    </div>
+</div>
+<div>
+    Los tipos de análisis que realiza esta aplicación son:
+    <ul>
+        <li>
+            Búsqueda tipo web.
+        </li>
+        <li>
+            Búsqueda de concordancia.
+        </li>
+        <li>
+            Colocacaciones.
+        </li>
+        <li>
+            Análisis de sentimientos.
+        </li>
+    </ul>
+</div>
+<div>
+    Link del repositorio:
+    <ul>
+        <li>
+            <a href="https://github.com/jolivaresc/corpus">Proyecto Final de Procesamiento de Corpus Textuales y Orales</a>
+        </li>
+    </ul>
+</div>
+<div>
+    Programas y software utilizado para la elaboración de este proyecto:
+    <ul>
+        <li>
+            Python 2.7: <a href="https://www.python.org/">https://www.python.org/</a>
+        </li>
+        <li>
+            Freeling: <a href="http://nlp.lsi.upc.edu/freeling/node/1"> http://nlp.lsi.upc.edu/freeling/node/1</a>
+        </li>
+        <li>
+            Manatee: <a href="https://nlp.fi.muni.cz/trac/noske/wiki/Downloads"> https://nlp.fi.muni.cz/trac/noske/wiki/Downloads</a>
+        </li>
+        <li>
+            Web2py: <a href="http://web2py.com/">http://web2py.com/</a>
+        </li>
+    </ul>
+</div>
+<br>
+<div align="center">
+    Proyecto elaborado por:<br>
+    <b>Díaz Ramírez Oscar Antonio.</b><br>
+    <b>Olivares Castillo José Luis.</b>
+</div>
+<br>
+{{=BEAUTIFY(response._vars)}}

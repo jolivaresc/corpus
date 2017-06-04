@@ -70,7 +70,7 @@ def infmutua():
     os.chdir(path)
     return dict(mi=mi)
 
-def colocaciones():
+def colocaciones():#concordancias
     response.flash = os.getcwd()
     message=request.vars.Query
     path=os.getcwd()
@@ -120,6 +120,9 @@ def btn4():
     form = SQLFORM.factory(Field('Palabra',requires=IS_NOT_EMPTY())).process()
     if form.accepted:
         redirect(URL('feelings',vars={'Palabra':form.vars.Palabra}))
+    return locals()
+
+def btn5():
     return locals()
 
 def user():
